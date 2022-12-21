@@ -262,3 +262,11 @@ public class Setting implements Serializable {
 
 }
 ```
+
+# 싱글톤 패턴 실무
+- Spring 의 bean container
+- Runtime : java 애플리케이션이 실행 되고 있는 환경에 대한 것
+```java
+Runtime runtime = Runtime.getRuntime();
+```
+- 다른 디자인 패턴 구현체의 일부로 쓰이기도 함

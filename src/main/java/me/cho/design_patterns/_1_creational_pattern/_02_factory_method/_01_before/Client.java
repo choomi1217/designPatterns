@@ -1,4 +1,4 @@
-package me.cho.design_patterns._1_creational_pattern.FactoryMethod._01_before;
+package me.cho.design_patterns._1_creational_pattern._02_factory_method._01_before;
 
 public class Client {
 

@@ -1,11 +1,19 @@
 package me.cho.design_patterns._1_creational_pattern._02_factory_method._03_java8;
 
+import me.cho.design_patterns._1_creational_pattern._03_abstract_factory._01_before.OomiAnchor;
+import me.cho.design_patterns._1_creational_pattern._03_abstract_factory._01_before.OomiWheel;
+import me.cho.design_patterns._1_creational_pattern._03_abstract_factory._02_after.Anchor;
+import me.cho.design_patterns._1_creational_pattern._03_abstract_factory._02_after.Wheel;
+
 public class Ship {
 
     String logo;
     String color;
     String name;
     String email;
+
+    private Anchor anchor;
+    private Wheel wheel;
 
     public String getLogo() {
         return logo;
@@ -47,5 +55,21 @@ public class Ship {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    public void setAnchor(Anchor anchor) {
+        this.anchor = anchor;
+    }
+
+    public Anchor getAnchor() {
+        return anchor;
+    }
+
+    public void setWheel(Wheel wheel) {
+        this.wheel = wheel;
+    }
+
+    public Wheel getWheel() {
+        return wheel;
     }
 }

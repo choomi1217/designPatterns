@@ -7,4 +7,6 @@
         <constructor-arg value="hello"/>
     </bean>
 
+    <bean id="oomiShip" class="me.cho.design_patterns._1_creational_pattern._02_factory_method._03_java8.Ship"></bean>
+
 </beans>

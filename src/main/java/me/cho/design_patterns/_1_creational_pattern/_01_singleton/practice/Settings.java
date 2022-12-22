@@ -1,4 +1,4 @@
-package me.cho.design_patterns._1_creational_pattern.singleton.practice;
+package me.cho.design_patterns._1_creational_pattern._01_singleton.practice;
 
 public class Settings {
     

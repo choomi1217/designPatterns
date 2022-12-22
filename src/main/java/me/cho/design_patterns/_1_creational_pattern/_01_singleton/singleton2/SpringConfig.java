@@ -1,4 +1,4 @@
-package me.cho.design_patterns._1_creational_pattern.singleton.singleton2;
+package me.cho.design_patterns._1_creational_pattern._01_singleton.singleton2;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -20,7 +20,7 @@ public class OomiShipFactory extends DefaultShipFactory {
 }
 ```
 
-# 선생님의 진행방식
+# 👨‍🏫 선생님의 진행방식
 1. Anchor와 Wheel을 Part로 정의하고 `ShipPartsFactory` 라는 Parts를 만드는 팩토리 클래스 생성.
 2. `ShipPartsFactory`를 구현하는 `OomiShipPartsFactory` 생성후 구현.
 3. `OomiShipPartsFactory`에서 사용될 `OomiAnchor` 와 `OomiWheel` 의 추상체인 `Anchor` 와 `Wheel` interface 생성.

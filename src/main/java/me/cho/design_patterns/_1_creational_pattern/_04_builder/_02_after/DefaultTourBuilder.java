@@ -9,56 +9,51 @@ import java.util.List;
 
 public class DefaultTourBuilder implements TourPlanBuilder{
 
-    private String title;
+    TourPlan tourPlan;
 
-    private int night;
 
-    private int day;
+    @Override
+    public TourPlanBuilder newInstance() {
+        this.tourPlan = new TourPlan();
+        return this;
+    }
 
-    private LocalDate startDate;
-
-    private String whereToStay;
-
-    private List<DetailPlan> plans;
     @Override
     public TourPlanBuilder title(String title) {
-        this.title = title;
+        this.tourPlan.setTitle(title);
         return this;
     }
 
     @Override
     public TourPlanBuilder nightAndDays(int nights, int days) {
-        this.night = nights;
-        this.day = days;
+        this.tourPlan.setNight(nights);
+        this.tourPlan.setDay(days);
         return this;
     }
 
     @Override
     public TourPlanBuilder startDate(LocalDate localDate) {
-        this.startDate = localDate;
+        this.tourPlan.setStartDate(localDate);
         return this;
     }
 
     @Override
     public TourPlanBuilder whereToStay(String whereToStay) {
         if(whereToStay.isBlank()){
-            this.whereToStay = "";
+            this.tourPlan.setWhereToStay(whereToStay);
         }
-        this.whereToStay = whereToStay;
+        this.tourPlan.setWhereToStay(whereToStay);
         return this;
     }
 
     @Override
     public TourPlanBuilder addPlan(int day, String plan) {
-        if(this.plans == null){
-            this.plans = new ArrayList<DetailPlan>();
-        }
-        this.plans.add(new DetailPlan(day, plan));
+        this.tourPlan.addPlan(day, plan);
         return this;
     }
 
     @Override
     public TourPlan getPlan() {
-        return new TourPlan(title,night, day, startDate, whereToStay, plans);
+        return tourPlan;
     }
 }

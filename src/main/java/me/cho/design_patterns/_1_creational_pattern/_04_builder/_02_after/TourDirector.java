@@ -13,7 +13,8 @@ public class TourDirector {
     }
 
     public TourPlan japanTour(){
-        return tourPlanBuilder.title("일본 료칸 여행")
+        return tourPlanBuilder.newInstance()
+                .title("일본 료칸 여행")
                 .startDate(LocalDate.of(2022, 12, 17))
                 .whereToStay("일본 료칸")
                 .nightAndDays(2, 3)
@@ -30,7 +31,8 @@ public class TourDirector {
     }
 
     public TourPlan ganwondoTour(){
-        return tourPlanBuilder.title("강원도 여행")
+        return tourPlanBuilder.newInstance()
+                .title("강원도 여행")
                 .startDate(LocalDate.of(2022, 12, 24))
                 .addPlan(0, "바다 보기")
                 .addPlan(0, "회 먹기")

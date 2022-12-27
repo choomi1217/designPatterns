@@ -29,3 +29,5 @@
 - StringBuffer ( Synchronized o )
 - Stream
 - Lombok
+
+![빌더 패턴 다이어그램](https://github.com/choomi1217/designPatterns/tree/master/diagrams/Builder.png)

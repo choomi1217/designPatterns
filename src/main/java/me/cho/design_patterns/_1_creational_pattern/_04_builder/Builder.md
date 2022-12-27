@@ -16,6 +16,16 @@
 
 
 # 장점과 단점
+- 장점
+  - 생성 과정이 복잡한 인스턴스 생성 로직을 모든곳에서 동일하게 사용 할 수 있게 함
+  - Director 클래스를 이용해서 인스턴스의 생성 과정을 숨길 수 있음. (겉으로 깨끗해보임)
+  - 불완전한 객체 생성을 막을 수 있음. (ex. getPlan();)
+- 단점
+  - Director + Builder 인스턴스가 필수로 필요함.
+  - 디자인 패턴의 공통적인 단점으로 클래스가 많고 복잡해짐.
 
-
-
+# 실제 사용 사례
+- StringBuilder ( Synchronized x )
+- StringBuffer ( Synchronized o )
+- Stream
+- Lombok

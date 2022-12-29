@@ -6,7 +6,7 @@ plugins {
 
 group = 'me.cho'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 configurations {
     compileOnly {
@@ -19,9 +19,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-websocket:2.6.0'
+    implementation 'org.modelmapper:modelmapper:2.4.2'
     implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'io.github.cemiltokatli.uricomponent:uri-component:1.0'
+    implementation 'org.springframework.boot:spring-boot-starter-websocket:2.7.0'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'

@@ -1,0 +1,23 @@
+@startuml
+
+interface Target{
+operation()
+}
+
+class Adapter{
+operation()
+}
+
+class Client
+
+class Adaptee{
+specificOperation()
+}
+
+Client ..left..> Target
+
+Adapter .up.|> Target
+Adapter --right--> Adaptee
+
+
+@enduml

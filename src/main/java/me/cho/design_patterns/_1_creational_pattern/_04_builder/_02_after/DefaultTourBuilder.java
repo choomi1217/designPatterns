@@ -11,7 +11,6 @@ public class DefaultTourBuilder implements TourPlanBuilder{
 
     TourPlan tourPlan;
 
-
     @Override
     public TourPlanBuilder newInstance() {
         this.tourPlan = new TourPlan();

@@ -1,4 +1,5 @@
 # 추상적인 것과 구체적인 것을 분리하여 연결하는 패턴
+# 추상화를 분리하여 둘이 독립적으로 변경될 수 있도록 하는 것입니다.
 
 ![BridgePatten](..\diagrams\Bridge.png)
 
@@ -24,3 +25,11 @@ Abstraction 계층 구조에 해당하는 챔피언이 Implementation Detail에 
 - 추상적인 코드를 구체적인 코드 변경 없이도 독립적으로 확장할 수 있음
   - 
 # 단점
+
+# 사용 되어지는 곳
+
+1. jdbc
+2. slf4j
+   - log4j 같은 구현체로 log를 남기면 클라이언트도 log4j를 써야 해서 slf4j를 사용함
+3. MailSender
+4. PlatformTransactionManager

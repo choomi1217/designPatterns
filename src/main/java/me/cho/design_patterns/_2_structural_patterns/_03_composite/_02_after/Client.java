@@ -2,7 +2,7 @@ package me.cho.design_patterns._2_structural_patterns._03_composite._02_after;
 
 public class Client {
     public static void main(String[] args) {
-        Item doranBlade = new Item( "도란검", 450);
+        Item doranBlade = new Item("도란검", 450);
         Item healPotion = new Item("체력물약", 50);
 
         Bag bag = new Bag();

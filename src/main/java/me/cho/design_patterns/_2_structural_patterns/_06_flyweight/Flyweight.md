@@ -1,6 +1,7 @@
 # 객체를 가볍게 만드는 패턴
 > 변동이 많은 부분(extrinsic)과 변동이 적은 부분을 분리, 변동이 적은 부분(intrinsic)을 재사용 한다.
 
+![플라이웨이트 패턴 클래스 다이어그램](Flyweight.drawio.png)
 
 ```java
 public class Client {
@@ -46,7 +47,7 @@ public class Client {
 # Flyweight가 사용되는 예제
 
 - Integer의 valueOf()를 하면 일정 범위까진 캐시된 인스턴스
-- 일정 범위 이상부턴 뉴인스턴스
+- 일정 범위 이상부턴 새로운 인스턴스
 
 ```java
 public class FlyweightInJava {
@@ -54,10 +55,10 @@ public class FlyweightInJava {
    public static void main(String[] args) {
       Integer i1 = Integer.valueOf(10);
       Integer i2 = Integer.valueOf(10);
-      System.out.println(i1 == i2);
+      System.out.println(i1 == i2); // true
       Integer i3 = Integer.valueOf(10000);
       Integer i4 = Integer.valueOf(10000);
-      System.out.println(i3 == i4);
+      System.out.println(i3 == i4); // false
    }
 }
 ```

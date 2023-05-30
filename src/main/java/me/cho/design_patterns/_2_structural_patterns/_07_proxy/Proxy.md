@@ -61,6 +61,7 @@ public class Client {
   - `gameService.startGame();` 변경되지 않음.
   - 변경되지 않으면서 기능도 추가함
   - 이는 Open–closed principle에 해당
-- 만약 `DefaultGameService` 자체가 생성 비용이 너무 비싸다면 지연 
+- 만약 `DefaultGameService` 자체가 생성 비용이 너무 비싸다면 객체를 만드는 걸 지연시킬 수 있다.
+  - Jpa의 지연로딩이 프록시 기반으로 만들어짐
 # 단점
 - 코드의 복잡성 증가

@@ -71,3 +71,14 @@ public class Client {
   - GameServiceProxy는 GameService를 implement 한다던가 하는 식으로 컴파일-타임에 사용 할 수 있게끔 만들었는데 자바에서 프록시 인스턴스를 런-타임에 사용 할 수 있게끔 만든 예제가 있음
   - 런-타임 관련된 객체를 **다이나믹** 하다 라고 표현하는데 자바엔 다이나믹 프록시가 있음
   - 애플리케이션의 동작 도중 자바의 객체를 동적으로 만들 수 있는 리플렉션이랑 기능으로 제공
+```java
+private GameService getGameservice(GameService targer){
+    return (GameService) Proxy.newProxyInstance(this.getClass().getClassLoader(),
+            new Class[]{GameService.class}, ((proxy, method, args) -> {
+                System.out.println(" Hello, Dynamic Proxy! ");
+                method.invoke(targer,args);
+                return null;
+        })
+    );
+}
+```

@@ -18,12 +18,14 @@ public class ProxyInJava {
     }
 
     private GameService getGameservice(GameService targer){
-        return (GameService) Proxy.newProxyInstance(this.getClass().getClassLoader(),
-                new Class[]{GameService.class}, ((proxy, method, args) -> {
+        return (GameService) Proxy.newProxyInstance(
+                this.getClass().getClassLoader(),
+                new Class[]{GameService.class},
+                ((proxy, method, args) -> {
                     System.out.println(" Hello, Dynamic Proxy! ");
                     method.invoke(targer,args);
                     return null;
-            })
+                })
         );
     }
 

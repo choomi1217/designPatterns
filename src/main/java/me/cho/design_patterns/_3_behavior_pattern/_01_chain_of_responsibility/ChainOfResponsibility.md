@@ -1,6 +1,7 @@
 # 책임 연쇄 패턴
 > 한가지 책임을 가진 객체들이 연결된 패턴
-
+ 
+![Chain Of Responsibility](./ChainOfResponsibility.drawio.png)
 
 ```java
 //Client
@@ -33,6 +34,7 @@ public class RequestHandler {
 
 # 무엇이 문제일까?
 > 누가 `request`에 대한 인증과 인가 기능을 넣어달라고 요청했다면?
+
 1. `handler` 메소드에 기능을 넣는다. 
    - 단일책임원칙을 위배
 ```java
@@ -71,3 +73,9 @@ public class RequestHandler {
     }
 }
 ```
+
+# 선생님의 진행방식
+- **최대한 `Client`가 구체적인 구현을 모르게 코드를 진행 시키는게 목표입니다.**
+
+
+

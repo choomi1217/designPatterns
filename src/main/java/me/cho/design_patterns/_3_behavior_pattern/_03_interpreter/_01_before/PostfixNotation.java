@@ -12,8 +12,6 @@ public class PostfixNotation {
     }
 
     public static void main(String[] args) {
-        Collections collections;
-        Collection collection;
         PostfixNotation postfixNotation = new PostfixNotation("123+-");
         postfixNotation.calculate();
     }
